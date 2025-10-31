@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="./assets/img/favicon.png">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+      <title>240 S Riverside Rd</title>
+      <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+      <meta name="viewport" content="width=device-width" />
+      <link href="./bootstrap3/css/bootstrap.min.css" rel="stylesheet" />
+      <link href="./assets/css/gsdk.css" rel="stylesheet"/>
+      <link href="./assets/css/examples.css" rel="stylesheet"/>
+      <!--     Fonts and icons     -->
+      <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+      <link href='https://fonts.googleapis.com/css?family=Grand+Hotel|Open+Sans:400,300' rel='stylesheet' type='text/css'>
+      <link href="./assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+   </head>
+   <body class="about-us">
+      <style type="text/css">
+         .full-height-container { /* Example parent container */
+         height: 100vh; /* Or 100% if its parent is also 100% height */
+         }
+         .parallax {
+         width: 100%;
+         height: 76vh !important;
+         overflow: hidden;
+         display: block;
+         }
+         .nav-logo { position: relative; bottom: .8em;}
+         .custom-gradient-header {
+         background: linear-gradient(to right, #FF8C00, #8B0000); /* Dark Orange to Dark Red */
+         color: white;
+         border-bottom: none;
+         padding: 1rem 1.25rem;
+         border-top-left-radius: 0.25rem;
+         border-top-right-radius: 0.25rem;
+         }
+         .background-image-area {
+         height: 500px;
+         width: 100%;
+         background-size: cover;
+         background-repeat: no-repeat !important;
+         background-position: center -600px !important; object-fit: cover;
+         }.background-image-area img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover; /* Scales the image to fit the container while maintaining aspect ratio */
+         }
+         .card-img-overimg {
+         position: relative; 
+         bottom: 100px; 
+         color: white;
+         text-align: center;
+         }
+         .background-hudson {
+         background: rgb(23, 72, 115) !important;
+         }
+         .table-gradient-header thead, .table-gradient-header {
+         background: linear-gradient(to right, #3b3b3b, #000000); /* Dark Orange to Dark Red */
+         color: white; /* For better text visibility on a dark gradient */
+         }
+         .orange-color { color: #FF8C00 !important;}
+         .orange-color-fonts { color: rgb(217, 9, 50, 1.0); !important; }
+         .nav-text-logo {
+         background-image: linear-gradient(135deg, #a3a3ff, #7879ff, #4949ff, #1f1fff, #0000ff) !important;
+         -webkit-background-clip: text; /* Clip the background to the text shape */
+         -webkit-text-fill-color: transparent; /* Make the text transparent to reveal the gradient */
+         color: transparent; /* Fallback for browsers that don't support -webkit-text-fill-color */
+         }
+         .orange-background  {background: linear-gradient(to right, rgb(65, 110, 150), rgb(16, 59, 97)) !important; /* Dark Orange to Dark Red */}  
+         .orange-background-btn { border: none !important; color: white !important;  }
+         .gradient-background-card { background: linear-gradient(to right, #FF8C00, #8B0000) !important;    padding: 1em;}
+         .gradient-background-card { background: linear-gradient(to right, #FF8C00, #8B0000) !important;    padding: 1em;}
+         .card-5 {
+         box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+         background: #fff;
+         border-radius: 2px;
+         }
+         .card-basic {
+         background-color: #121212; /* A dark theme color */
+         color: #f5f5f5; /* Light text for contrast */
+         border-radius: 8px;
+         overflow: hidden; /* Important for rounding image corners */
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+         transition: transform 0.3s ease, box-shadow 0.3s ease;
+         }
+         .card-basic:hover {
+         transform: translateY(-5px);
+         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+         }
+         .card-basic img {
+         width: 100%;
+         height: auto;
+         display: block;
+         }
+         .card-basic .card-content {
+         padding: 16px;
+         }
+         .full-image-area {
+         background: url(./assets//img/brick-4.jpg) !important;
+         background-repeat: no-repeat;
+         background-size: cover;
+         height: 70vh;
+         width: 100%;
+         padding-bottom: 4em; padding-top: 4em;
+         }
+         .light-white-color {color: rgb(232, 227, 227, 1.0) !important;}
+         .basic-color { 
+         background-image: linear-gradient(45deg, #3b3b3b, #000000) !important;
+         -webkit-background-clip: text; /* Clip the background to the text shape */
+         -webkit-text-fill-color: transparent; /* Make the text transparent to reveal the gradient */
+         color: transparent; /* Fallback for browsers that don't support -webkit-text-fill-color */ }
+         .overlay-div {
+         position: absolute;
+         top: 50%; /* Center vertically */
+         left: 50%; /* Center horizontally */
+         transform: translate(-50%, -50%); /* Adjust for true centering */
+         width: 80%; /* Adjust width as needed */
+         padding: 20px;
+         background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+         border: 5px solid rgb(173, 106, 43, 1.0); /* "Cool" border color and thickness */
+         border-radius: 10px; /* Rounded corners for the border */
+         box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Optional shadow effect */
+         display: flex; /* For aligning content and icon */
+         justify-content: space-between; /* Pushes icon to the right */
+         align-items: center; /* Vertically aligns content and icon */
+         }
+         .icon-container {
+         font-size: 2em; /* Adjust icon size */
+         color: #ff0077; /* Icon color */
+         }
+         .btn-white {
+         color: white !important; /* Replace with your desired text color */
+         border: 1px solid white !important; /* Optional: Add a border if needed */
+         }
+         .property-facts-span {
+         font-weight: 300;
+         font-size: 1.4em;
+         }
+         .property-facts-span-4 {
+         font-weight: 300;
+         font-size: 1.9em; 
+         }
+         .container-custom{
+         width: 80%; margin-left: auto; margin-right: auto;
+         }
+         .btn-div-contact {margin-top: 2.7em !important;}
+         .footer { padding-top: 6em;}
+         .subscribe-line-transparent::after {
+         background-color: rgba(23, 72, 115, 0.8) !important;
+         }
+         .text-white {color: #ff0077 !important;}
+         .navbar-inverse {background-color: rgba(23, 72, 115, 1) !important;}
+         .border-color { border-color:  rgb(232, 227, 227, 1.0) !important; color: rgb(232, 227, 227, 1.0) !important;}
+         .filter-black-custom {
+         position: relative;
+         }
+         .filter-black-custom:after {
+         position: absolute;
+         left: 0;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         display: block;
+         z-index: 1;
+         background-color: rgba(0, 0, 0, 0.1);
+         content: "";
+         }
+         @media screen and (max-width: 678px) {
+         /* CSS rules to apply when the screen width is 768px or less */
+         .col-xs-3 {
+         width: 100% !important;
+         }
+         .full-image-area {
+         min-height: 170vh !important;
+         }
+         }
+         .logo-image-bottom { padding-top: .6em; }
+         .imageSrc {max-width: 100%;}
+         @media screen and (max-width: 970px) {
+         .nav-logo { position: relative; bottom: .5em;}
+         }
+      </style>
+      <nav class="navbar navbar-inverse navbar-transparent navbar-fixed-top" role="navigation">
+         <div class="container-custom">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+               <button id="menu-toggle" type="button" class="navbar-toggle">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar bar1"></span>
+               <span class="icon-bar bar2"></span>
+               <span class="icon-bar bar3"></span>
+               </button>
+               <a class="navbar-brand nav-logo" href=""><img src="./assets/img/logox400.png" height="45px"></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse">
+               <ul  class="nav navbar-nav navbar-right">
+                  <li>
+                     <a href="https://hudsoncommercial.com/">   
+                     Properties
+                     </a>
+                  </li>
+                  <li>
+                     <a href="https://hudsoncommercial.com/frontpage/about/">
+                     About
+                     </a>
+                  </li>
+                  <li class="">
+                     <a href="#images" >
+                     Images
+                     </a>
+                  </li>
+                  <li class="nav-link">
+                     <a href="#basic-info" class="" >
+                     Basic info
+                     </a>
+                  </li>
+                  <li><a href="https://hudsoncommercial.com/contact-us/" class="btn btn-round btn-white">Contact Us
+                     </a>
+                  </li>
+               </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+         </div>
+      </nav>
+      <div class="wrapper">
+         <div class="parallax filter-black-custom" >
+            <div class="parallax-image full-height-container" uk-parallax="bgy: -200">
+               <img src="./assets/img/IMG_0280.jpg" class="full-height-container" style="object-fit: cover; position: relative; top: 16px;">
+            </div>
+            <div class="small-info">
+               <h1 class="">Building For Sale</h1>
+               <h3>240 S Riverside Rd, is a mix of offices, Lab space and a small amount warehouse located in Highland, NY.</h3>
+            </div>
+         </div>
+         <div class="section">
+            <div class="container-fluid image-container-1" style="padding-left: 10.5%; padding-right: 6%;"  >
+               <div class="row">
+                  <div class="col-md-6 " style="padding-left: 2em">
+                     <h2 class="section-title basic-color">Excelent Opportunity</h2>
+                     <p style="padding-right: 1.4em;">
+                        240 S Riverside Rd, is a mix of offices, Lab space and a small amount warehouse located in Highland, NY. The building is 4,800 SF with drop ceilings and artistic outside appearance. The building has a .86 AC Lot and was built in 1976. Recent renovations were made in the past three years, in the early 2019.
+                     </p>
+                     </p> </p>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="col-md-11">
+                        <div class=" card-basic  p-5"> <img src="./assets/img/240-S-Riverside-Rd-Highland-NY-Other-7-LargeHighDefinition.jpeg" width="100%" style="object-fit: cover;" ></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="basic-info" class="target-element"></div>
+         <div class="section section-gray" >
+            <div class="container-fluid image-container" style="padding-left: 10.5%; padding-right: 4%;" >
+               <h2 class="section-title basic-color" style="margin-left: .2em;">Property Facts<small> </small></h2>
+               <div class="team-presentation">
+                  <div class="row">
+                     <div class="col-md-7" style="padding-left: 1em; padding-right: 1em;">
+                        <div class="card ml-4 pr-4 card-basic" ><img src="./assets/img/IMG_0280.jpg" class="" style="height: 527px; width: 100%; object-fit: cover;"></div >
+                     </div>
+                     <div class="col-md-4">
+                        <div class="card card-5  p-3 facts-card">
+                           <ul class="list-group  ">
+                              <li class="list-group-item text-center">
+                                 <h5 class="mb-0 "> <span class="property-facts-span-4"> Property Info</span></h5>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-center property-facts-span">
+                                 Price
+                                 <span class="badge indigo darken-4 indigo darken-4 badge background-hudson ms-2">$10.50 NNN</span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-center property-facts-span">
+                                 No. Stories
+                                 <span class="badge background-hudson ms-2">2</span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-center property-facts-span">
+                                 Property Type
+                                 <span class="badge badge background-hudson ms-2">Industrial</span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-center property-facts-span">
+                                 Year Built
+                                 <span class="badge background-hudson ms-2">1980</span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-center property-facts-span">
+                                 Drive In
+                                 <span class="badge background-hudson ms-2">1</span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-center property-facts-span">
+                                 Lot Size
+                                 <span class="badge background-hudson ms-2">.82 AC</span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-center property-facts-span">
+                                 Address
+                                 <span class="badge background-hudson ms-2"> 1 Chips Ln, Fishkill, NY 12524</span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-center property-facts-span">
+                                 Available
+                                 <span class="badge background-hudson ms-2"> 19,800</span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-center property-facts-span">
+                                 Property Sub-type
+                                 <span class="badge background-hudson ms-2">Flex</span>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end section meet our team -->
+      <div class="section full-image-area">
+         <div class="container">
+            <div class=" overlay-div">
+               <div class="row">
+                  <div class="col-xs-3">
+                     <div class="info" >
+                        <div class="icon">
+                           <i class="pe-7s-note2 "></i>
+                        </div>
+                        <div class="description" >
+                           <h3 class="light-white-color"> 1. Facility</h3>
+                           <p class="text-muted light-white-color">The building was used for a for pharmaceutical. </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xs-3">
+                     <div class="info" >
+                        <div class="icon">
+                           <i class="pe-7s-scissors  "></i>
+                        </div>
+                        <div class="description">
+                           <h3 class="light-white-color"> 2. Architecture </h3>
+                           <p class="text-muted light-white-color">The building has a nice up to date design architecture </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xs-3">
+                     <div class="info" >
+                        <div class="icon">
+                           <i class="pe-7s-tools  "></i>
+                        </div>
+                        <div class="description">
+                           <h3 class="light-white-color"> 3. Develop </h3>
+                           <p class="text-muted light-white-color">The building would be good to develop products and research.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xs-3">
+                     <div class="info">
+                        <div class="icon">
+                           <i class="pe-7s-paint  "></i>
+                        </div>
+                        <div class="description">
+                           <h3 class="light-white-color"> 4. Renovated </h3>
+                           <p class="light-white-color">The building has been newly renovated. </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end section meet our clients -->
+      <div id="images" class="target-element"></div>
+      <div class="section" >
+         <div class="container">
+            <h2 class="section-title basic-color">Images</h2>
+            <div class="row">
+               <div class="col-md-4">
+                  <div class="card card-plain">
+                     <div class="image">
+                        <img src="./assets/img/240-S-Riverside-Rd-Highland-NY-Other-2-LargeHighDefinition.jpeg" alt="..."/>
+                        <div class="filter">
+                           <button type="button" class="btn btn-neutral btn-simple image-viewer-btn" data-toggle="modal" data-target=".bd-example-modal-lg">
+                           <i class="fa fa-image"></i> View Image
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- end card -->
+               </div>
+               <div class="col-md-8">
+                  <div class="card card-plain">
+                     <div class="image">
+                        <img src="./assets/img/240-S-Riverside-Rd-Highland-NY-Other-3-LargeHighDefinition.jpeg" alt="..."/>
+                        <div class="filter">
+                           <button type="button" class="btn btn-neutral btn-simple image-viewer-btn" data-toggle="modal" data-target=".bd-example-modal-lg">
+                           <i class="fa fa-image"></i> View Image
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- end card -->
+               </div>
+               <div class="col-md-8">
+                  <div class="card card-plain">
+                     <div class="image">
+                        <img src="./assets/img/240-S-Riverside-Rd-Highland-NY-Other-4-LargeHighDefinition.jpeg" alt="..."/>
+                        <div class="filter">
+                           <button type="button" class="btn btn-neutral btn-simple image-viewer-btn" data-toggle="modal" data-target=".bd-example-modal-lg">
+                           <i class="fa fa-image"></i> View Image
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- end card -->
+               </div>
+               <div class="col-md-4">
+                  <div class="card card-plain">
+                     <div class="image">
+                        <img src="./assets/img/240-S-Riverside-Rd-Highland-NY-Other-6-LargeHighDefinition.jpeg" alt="..."/>
+                        <div class="filter">
+                           <button type="button" class="btn btn-neutral btn-simple image-viewer-btn" data-toggle="modal" data-target=".bd-example-modal-lg">
+                           <i class="fa fa-image"></i> View Image
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- end card -->
+               </div>
+               <div class="col-md-4">
+                  <div class="card card-plain">
+                     <div class="image">
+                        <img src="./assets/img/240-S-Riverside-Rd-Highland-NY-Other-7-LargeHighDefinition.jpeg" alt="..."/>
+                        <div class="filter">
+                           <button type="button" class="btn btn-neutral btn-simple image-viewer-btn" data-toggle="modal" data-target=".bd-example-modal-lg">
+                           <i class="fa fa-image"></i> View Image
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- end card -->
+               </div>
+               <div class="col-md-4">
+                  <div class="card card-plain">
+                     <div class="image">
+                        <img src="./assets/img/240-S-Riverside-Rd-Highland-NY-Other-7-LargeHighDefinition.jpeg" alt="..."/>
+                        <div class="filter">
+                           <button type="button" class="btn btn-neutral btn-simple image-viewer-btn" data-toggle="modal" data-target=".bd-example-modal-lg">
+                           <i class="fa fa-image"></i> View Image
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- end card -->
+               </div>
+               <div class="col-md-4">
+                  <div class="card card-plain">
+                     <div class="image">
+                        <img src="./assets/img/IMG_0280.jpg" alt="..."/>
+                        <div class="filter">
+                           <button type="button" class="btn btn-neutral btn-simple image-viewer-btn" data-toggle="modal" data-target=".bd-example-modal-lg">
+                           <i class="fa fa-image"></i> View Image
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- end card -->
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end section meet our clients -->
+      <div class="subscribe-line subscribe-line-transparent" style="background-image: url('./assets/img/240-S-Riverside-Rd-Highland-NY-Other-7-LargeHighDefinition.jpeg');  ">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-9">
+                  <form class="">
+                     <div class="form-group">
+                        <h2>Hudson Commercial Real Estate</h2>
+                     </div>
+                  </form>
+               </div>
+               <div class="col-md-3">
+                  <a href="mailto:sam@hudsoncommercial.com" class="btn background-hudson btn-fill btn-block btn-div-contact">Contact Broker!</a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <footer class="footer footer-big background-hudson light-white-color">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-2">
+                  <img src="./assets/img/hudson-logo 4.png" class="logo-image-bottom">
+               </div>
+               <div class="col-md-2 col-md-offset-1 light-white-color">
+                  <h5 class="title" class="light-white-color">  <span class="light-white-color">Company Links</span></h5>
+                  <nav>
+                     <ul>
+                        <li>
+                           <a href="https://hudsoncommercial.com/" class="light-white-color">
+                           <span class="light-white-color">Home</span>  
+                           </a>
+                        </li>
+                        <li>
+                           <a href="https://hudsoncommercial.com/frontpage/about/" class="light-white-color">
+                           <span class="light-white-color"> About</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="https://hudsoncommercial.com/management/" class="light-white-color">
+                           Management  
+                           </a>
+                        </li>
+                        <li>
+                           <a href="https://hudsoncommercial.com/contact-us/" class="light-white-color">
+                           Contact Us
+                           </a>
+                        </li>
+                        <li>
+                        </li>
+                     </ul>
+                  </nav>
+               </div>
+               <div class="col-md-3 col-md-offset-1">
+                  <h5 class="title" class="light-white-color"> <span class="light-white-color"> Website Links</h5>
+                  <nav>
+                     <ul>
+                        <li>
+                           <a href="https://hudsoncommercial.com/" class="light-white-color">   
+                           Properties
+                           </a>
+                        </li>
+                        <li>
+                           <a href="https://hudsoncommercial.com/frontpage/about/" class="light-white-color">
+                           About
+                           </a>
+                        </li>
+                        <li class="">
+                           <a href="#images" class="light-white-color">
+                           Images
+                           </a>
+                        </li>
+                        <li class="light-white-color">
+                           <a href="#basic-info" class="light-white-color" >
+                           Basic info
+                           </a>
+                        </li>
+                     </ul>
+                  </nav>
+               </div>
+               <div class="col-md-3">
+                  <h5 class="title light-white-color">About Us</h5>
+                  <nav>
+                     <ul>
+                        <li>
+                           <p class="font-weight-normal light-white-color"> At Hudson Commercial Real Estate, our goal  is to provide you with the leading edge  empowering you with more choices, market knowledge, and superb execution in real estate.
+                           </p>
+                        </li>
+                     </ul>
+                  </nav>
+               </div>
+            </div>
+            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+               <div class="modal-dialog modal-lg dark">
+                  <div class="modal-content" style="background: rgba(23, 72, 115, 0.8); padding-bottom: 2em;">
+                     <div class="modal-header ">
+                        <h5 class="modal-title" id="exampleModalLabel">Building Image</h5>
+                        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                           <!-- Example with Font Awesome icon -->
+                           <i class="fa fa-times " style="color: white;"></i> 
+                        </button>
+                     </div>
+                     <div class="row">
+                        <div class="colmd-10">   <img id="modal-image-id" class="imageSrc  text-center" src="./assets/img/240-S-Riverside-Rd-Highland-NY-Other-7-LargeHighDefinition.jpeg" alt="..." style="margin-left: 2em !important; padding-left: 2em;"/></div>
+                        <div class="col-md-2"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <hr>
+            <div class="social-area text-center">
+               <!-- <img src="./assets/img/logox400.png" height="74px"> -->
+            </div>
+            <div class="copyright border-color">
+               © 2024 Hudson Commercial Real Estate Corp.
+            </div>
+         </div>
+      </footer>
+      </div> <!-- wrapper -->
+   </body>
+   <!--  jQuery and Bootstrap core files    -->
+   <script src="./assets/js/jquery.js" type="text/javascript"></script>
+   <script src="./assets/js/jquery-ui.custom.min.js" type="text/javascript"></script>
+   <script src="./bootstrap3/js/bootstrap.min.js" type="text/javascript"></script>
+   <!--  Plugins -->
+   <script src="./assets/js/gsdk-checkbox.js"></script>
+   <script src="./assets/js/gsdk-morphing.js"></script>
+   <script src="./assets/js/gsdk-radio.js"></script>
+   <script src="./assets/js/gsdk-bootstrapswitch.js"></script>
+   <script src="./assets/js/bootstrap-select.js"></script>
+   <script src="./assets/js/bootstrap-datepicker.js"></script>
+   <script src="./assets/js/chartist.min.js"></script>
+   <script src="./assets/js/jquery.tagsinput.js"></script>
+   <!--  Get Shit Done Kit PRO Core javascript      -->
+   <script src="./assets/js/get-shit-done.js"></script>
+   <script type="text/javascript">
+      var big_image;
+      $().ready(function(){
+          responsive = $(window).width();
+      
+          $(window).on('scroll', gsdk.checkScrollForTransparentNavbar);
+      
+          if (responsive >= 768){
+              big_image = $('.parallax-image').find('img');
+      
+              $(window).on('scroll',function(){
+                  parallax();
+              });
+          }
+      
+      });
+      
+      var parallax = function() {
+          var current_scroll = $(this).scrollTop();
+      
+          oVal = ($(window).scrollTop() / 3);
+          big_image.css('top',oVal);
+      };
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    $(document).ready(function() {
+        $('a[href^="#"]').on('click', function(event) {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+      
+            // Get the target element's ID from the href attribute
+            var targetId = $(this).attr('href');
+            var targetElement = $(targetId);
+      
+            // Check if the target element exists
+            if (targetElement.length) {
+                // Calculate the offset, subtracting the navbar height (100px)
+                var offset = targetElement.offset().top - 70; // Adjust for 100px navbar
+      
+                // Animate the scroll to the adjusted position
+                $('html, body').animate({
+                    scrollTop: offset
+                }, 800); // 800ms for smooth animation, adjust as needed
+            }
+        });
+      
+      
+      
+      
+     
+        $('.image-viewer-btn').on('click', function() {
+        
+       
+      
+       
+        var imageSrc = $(this).closest('.image').find('img').attr('src');
+      
+      $('.imageSrc').attr('src', imageSrc);
+      });
+      
+      
+      
+      
+      });
+      
+      
+      
+      
+      $(document).ready(function() {
+        function applyResponsiveStyles() {
+            if (window.matchMedia("(max-width: 768px)").matches) {
+                // Apply styles for smaller screens
+                
+                $(".image-container").css({
+                    "width": "100%",
+                 
+                     "padding-left": "1.4em",
+                     "padding-right": "1.4em"
+                });
+                    $(".image-container-1").css({ 
+                    "width": "100%",
+                 
+                     "padding-left": "1.4em",
+                     "padding-right": "1.4em"
+                });
+            } else {
+                // Apply styles for larger screens
+                $(".image-container-1").css({
+                    "padding-left": "10.5%",
+                    "padding-right": "6%"
+                });
+      
+                 $(".image-container").css({
+                   "padding-left": "10.5%",
+                    "padding-right": "4%"
+                });
+            }
+        }
+      
+        // Call the function on page load
+        applyResponsiveStyles();
+      
+        // Call the function on window resize
+        $(window).resize(function() {
+            applyResponsiveStyles();
+        });
+      
+      
+      
+      });
+      
+      
+   </script>
+   <!-- If you are using TypeKit.com uncomment this code otherwise you can delete it -->
+   <!--
+      <script src="https://use.typekit.net/[your kit code here].js"></script>
+      <script>try{Typekit.load({ async: true });}catch(e){}</script>
+      -->
+   <!-- If you have retina @2x images on your server which can be sent to iPhone/iPad/MacRetina, please uncomment the next line, otherwise you can delete it -->
+   <!-- <script src="assets/js/retina.min.js"></script> -->
+</html>
