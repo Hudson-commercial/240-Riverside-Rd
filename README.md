@@ -7,7 +7,7 @@
 
 ## Links
 
-- [(https://hudson-commercial.github.io/240-Riverside-Rd](https://hudson-commercial.github.io/240-Riverside-Rd) - Link to Project website - 
+- [https://hudson-commercial.github.io/240-Riverside-Rd/](https://hudson-commercial.github.io/240-Riverside-Rd/) - Link to Project website - 
 - [https://hudsoncommercial.com/](https://hudsoncommercial.com/) - Link to Hudson Commercial Real Estate Website - 
 - [[https://www.loopnet.com/Listing/240-S-Riverside-Rd-Highland-NY/26261045/](https://www.loopnet.com/Listing/240-S-Riverside-Rd-Highland-NY/26261045/)]) - Link to The Loopnet Listing For 22-24 Riverview Dr - 
 
